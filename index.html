@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
+  <title>OSCILLATION INVERSION: UNDERSTANDING THE STRUCTURE OF LARGE FLOW MODELS THROUGH THE LENS OF INVERSION METHODS</title>
   <link rel="stylesheet" href="./style.css"> <!-- Link your stylesheet if needed -->
   <style>
     body {
@@ -70,9 +70,7 @@
 
   <!-- Title Section -->
   <div class="content">
-    <h1><strong>OSCILLATION INVERSION: UNDERSTAND THE STRUC-
-TURE OF LARGE FLOW MODEL <br> THROUGH THE LENS
-OF INVERSION METHOD</strong></h1>
+    <h1><strong>OSCILLATION INVERSION: UNDERSTANDING THE STRUCTURE OF LARGE FLOW MODELS THROUGH THE LENS OF INVERSION METHODS</strong></h1>
   </div>
 
   <!-- Authors Section -->
@@ -102,23 +100,23 @@ OF INVERSION METHOD</strong></h1>
   <!-- Abstract Section -->
   <div class="content">
     <h2>Abstract</h2>
-    <p>Generative models transform random noise into images; their inversion aims to transform images back to structured noise for recovery and editing. This paper addresses inversion and editing tasks of real images using stochastic rectified flow models. We propose a novel inversion method that provides state-of-the-art performance in zero-shot inversion and editing, outperforming prior works with qualitative and quantitative results.</p>
+    <p>Generative models transform random noise into images; their inversion aims to transform images back to structured noise for recovery and editing. This paper addresses the inversion and editing of real images using stochastic rectified flow models. We propose a novel inversion method that provides state-of-the-art performance in zero-shot inversion and editing, outperforming prior works with qualitative and quantitative results.</p>
   </div>
 
   <!-- Contributions Section -->
   <div class="content">
     <h2>Contributions</h2>
     <ul>
-      <li>Efficient inversion method for rectified flow models, requiring no additional training or complex attention processors.</li>
-      <li>Novel vector field for RF inversion that interpolates between two objectives: image fidelity and alignment with the true distribution of clean images.</li>
-      <li>Evaluation across three benchmarks (LSUN-Bedroom, LSUN-Church, SFHQ) on stroke-to-image synthesis and image editing, with user preference evaluations.</li>
+      <li>An efficient inversion method for rectified flow models, requiring no additional training or complex attention processors.</li>
+      <li>A novel vector field for RF inversion that balances image fidelity with alignment to the true distribution of clean images.</li>
+      <li>Extensive evaluations across three benchmarks (LSUN-Bedroom, LSUN-Church, SFHQ) on stroke-to-image synthesis and image editing, along with user preference evaluations.</li>
     </ul>
   </div>
 
   <!-- Graphical Model Section -->
   <div class="content">
     <h2>Graphical Model</h2>
-    <p>Graphical comparison of DDIM inversion and RF inversion. RF inversion significantly reduces deviation between original image and the reconstructed latent space, improving faithfulness.</p>
+    <p>A comparison of DDIM inversion and RF inversion. RF inversion significantly reduces deviation between the original image and the reconstructed latent space, improving faithfulness.</p>
     <img src="./data/graph.png" alt="Graphical Model" class="summary-img">
   </div>
 
@@ -147,7 +145,7 @@ OF INVERSION METHOD</strong></h1>
   <div class="content">
     <h2>Semantic Image Editing Results</h2>
     <img src="./data/glasses.png" alt="Adding Glasses" class="summary-img">
-    <h3>Adding glasses using prompt "wearing glasses".</h3>
+    <h3>Adding glasses using the prompt "wearing glasses".</h3>
     <img src="./data/age.png" alt="Age Editing" class="summary-img">
     <h3>Age editing: Our method regulates the extent of age editing.</h3>
   </div>
@@ -155,7 +153,7 @@ OF INVERSION METHOD</strong></h1>
   <!-- Text-to-Image Generation Section -->
   <div class="content">
     <h2>Text-to-Image Generation</h2>
-    <p>Qualitative results on text-to-image generation using rectified stochastic differential equations (SDE) across different steps of discretization.</p>
+    <p>Qualitative results on text-to-image generation using rectified stochastic differential equations (SDE) across different discretization steps.</p>
     <img src="./data/t2i-gen.png" alt="Text-to-Image Generation" class="summary-img">
   </div>
 
