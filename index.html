@@ -1,123 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .authors {
-            text-align: center;
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .institution {
-            text-align: center;
-            font-size: 14px;
-            color: gray;
-        }
-        .links {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .links a {
-            margin: 0 10px;
-            color: blue;
-            text-decoration: none;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 40px 0;
-        }
-        .image-grid img {
-            width: 100%;
-            border: 2px solid orange;
-        }
-        .caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    </style>
-</head>
-<body>
+<div align="center">
+<h1>Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations</h1>
 
-    <h1>Semantic Image Inversion and Editing using Stochastic Rectified Differential Equations</h1>
+<a href='https://rf-inversion.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a>
+<a href='https://arxiv.org/pdf/2410.10792'><img src='https://img.shields.io/badge/ArXiv-Preprint-red'></a>
+</div>
 
-    <div class="authors">
-        <p>Litu Rout<sup>1,2</sup>, Yujia Chen<sup>2</sup>, Nataniel Ruiz<sup>2</sup>, Constantine Caramanis<sup>1</sup>, Sanjay Shakkottai<sup>1</sup>, Wen-Sheng Chu<sup>2</sup></p>
-    </div>
 
-    <div class="institution">
-        <p>1 The University of Texas at Austin, 2 Google</p>
-    </div>
+<!-- **[Code will be released here...]**   -->
 
-    <div class="links">
-        <a href="#">Paper</a>
-        <a href="#">arXiv</a>
-        <a href="#">Code</a>
-    </div>
 
-    <div class="image-grid">
-        <div>
-            <img src="style1.jpg" alt="Style Image 1">
-            <div class="caption">Ref. style</div>
-        </div>
-        <div>
-            <img src="result1.jpg" alt="Result Image 1">
-            <div class="caption">"a girl"</div>
-        </div>
-        <div>
-            <img src="result2.jpg" alt="Result Image 2">
-            <div class="caption">"a panda"</div>
-        </div>
-        <div>
-            <img src="style2.jpg" alt="Style Image 2">
-            <div class="caption">Ref. style</div>
-        </div>
-        <div>
-            <img src="result3.jpg" alt="Result Image 3">
-            <div class="caption">"face of a boy"</div>
-        </div>
-        <div>
-            <img src="result4.jpg" alt="Result Image 4">
-            <div class="caption">"a dwarf"</div>
-        </div>
-        <div>
-            <img src="content1.jpg" alt="Content Image 1">
-            <div class="caption">Ref. content</div>
-        </div>
-        <div>
-            <img src="result5.jpg" alt="Result Image 5">
-            <div class="caption">"sleeping cat"</div>
-        </div>
-        <div>
-            <img src="result6.jpg" alt="Result Image 6">
-            <div class="caption">"silver cat sculpture"</div>
-        </div>
-        <div>
-            <img src="result7.jpg" alt="Result Image 7">
-            <div class="caption">"origami cat"</div>
-        </div>
-        <div>
-            <img src="result8.jpg" alt="Result Image 8">
-            <div class="caption">"lion"</div>
-        </div>
-        <div>
-            <img src="result9.jpg" alt="Result Image 9">
-            <div class="caption">"tiger"</div>
-        </div>
-    </div>
+Rectified flows for image inversion and editing. Our approach efficiently inverts reference style images in (a) and (b) without requiring text descriptions of the images and applies desired edits based on new prompts (e.g. “a girl” or “a dwarf”). For a reference content image (e.g. a cat in (c) or a face in (d)), it performs semantic image editing  e.g. “ sleeping cat”) and stylization (e.g. “a photo of a cat in origmai style”) based on prompts, without leaking unwanted content from the reference image (input images have orange borders).
 
-</body>
-</html>
+![teaser](./data/main.png)
+
+
+## 🔥 Updates
+- **[2024.10.14]** [Paper](https://arxiv.org/pdf/2410.10792) is published on arXiv!
+
+
+## Citation
+
+```
+@article{rout2024rfinversion,
+  title={Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations},
+  author={Litu Rout and Yujia Chen and Nataniel Ruiz and Constantine Caramanis and Sanjay Shakkottai and Wen-Sheng Chu},
+  journal={arXiv preprint arXiv:2410.10792},
+  year={2024}
+}
+```
+
+<!-- ## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=LituRout/RB-Modulation&type=Date)](https://star-history.com/#LituRout/RB-Modulation&Date) -->
+
+## Licenses
+
+Copyright © 2024, Google LLC. All rights reserved. 
