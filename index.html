@@ -1,21 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Project Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .authors {
+            text-align: center;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .institution {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+        }
+        .links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .links a {
+            margin: 0 10px;
+            color: blue;
+            text-decoration: none;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .image-grid img {
+            width: 100%;
+            border: 2px solid orange;
+        }
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to My Project Page</h1>
-  <p>This page showcases my images and videos.</p>
 
-  <h2>Sample Image</h2>
-  <img src="image1.png" alt="Sample Image" width="400">
+    <h1>Semantic Image Inversion and Editing using Stochastic Rectified Differential Equations</h1>
 
-  <h2>Sample Video</h2>
-  <video width="400" controls>
-    <source src="sample_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <div class="authors">
+        <p>Litu Rout<sup>1,2</sup>, Yujia Chen<sup>2</sup>, Nataniel Ruiz<sup>2</sup>, Constantine Caramanis<sup>1</sup>, Sanjay Shakkottai<sup>1</sup>, Wen-Sheng Chu<sup>2</sup></p>
+    </div>
+
+    <div class="institution">
+        <p>1 The University of Texas at Austin, 2 Google</p>
+    </div>
+
+    <div class="links">
+        <a href="#">Paper</a>
+        <a href="#">arXiv</a>
+        <a href="#">Code</a>
+    </div>
+
+    <div class="image-grid">
+        <div>
+            <img src="style1.jpg" alt="Style Image 1">
+            <div class="caption">Ref. style</div>
+        </div>
+        <div>
+            <img src="result1.jpg" alt="Result Image 1">
+            <div class="caption">"a girl"</div>
+        </div>
+        <div>
+            <img src="result2.jpg" alt="Result Image 2">
+            <div class="caption">"a panda"</div>
+        </div>
+        <div>
+            <img src="style2.jpg" alt="Style Image 2">
+            <div class="caption">Ref. style</div>
+        </div>
+        <div>
+            <img src="result3.jpg" alt="Result Image 3">
+            <div class="caption">"face of a boy"</div>
+        </div>
+        <div>
+            <img src="result4.jpg" alt="Result Image 4">
+            <div class="caption">"a dwarf"</div>
+        </div>
+        <div>
+            <img src="content1.jpg" alt="Content Image 1">
+            <div class="caption">Ref. content</div>
+        </div>
+        <div>
+            <img src="result5.jpg" alt="Result Image 5">
+            <div class="caption">"sleeping cat"</div>
+        </div>
+        <div>
+            <img src="result6.jpg" alt="Result Image 6">
+            <div class="caption">"silver cat sculpture"</div>
+        </div>
+        <div>
+            <img src="result7.jpg" alt="Result Image 7">
+            <div class="caption">"origami cat"</div>
+        </div>
+        <div>
+            <img src="result8.jpg" alt="Result Image 8">
+            <div class="caption">"lion"</div>
+        </div>
+        <div>
+            <img src="result9.jpg" alt="Result Image 9">
+            <div class="caption">"tiger"</div>
+        </div>
+    </div>
+
 </body>
 </html>
