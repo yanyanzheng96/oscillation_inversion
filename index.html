@@ -63,6 +63,24 @@
       margin: 10px 0;
       font-size: 14px;
     }
+    .gif-container {
+      display: flex;                  /* Ensure horizontal layout with flexbox */
+      justify-content: space-between; /* Space out the GIFs */
+      align-items: center;            /* Center vertically (if needed) */
+      flex-wrap: nowrap;              /* Ensure no wrapping happens */
+      gap: 10px;                      /* Add a gap between GIFs */
+    }
+
+    .teaser-gif {
+      width: 23%;                     /* Resize the GIFs to take up 23% of the container width */
+      height: auto;                   /* Maintain aspect ratio */
+    }
+  
+    .teaser-pdf {
+      width: 150%;                     /* Resize the GIFs to take up 23% of the container width */
+      height: auto;                   /* Maintain aspect ratio */
+    }
+
   </style>
 </head>
 
@@ -92,80 +110,89 @@
     <a href="https://github.com/username/repository" target="_blank">[Code]</a>
   </div>
 
-  <!-- Main Image -->
+
   <div class="content">
-    <img src="./data/teaser.pdf" alt="Main Teaser" class="teaser-gif">
-    <p><b>Rectified flows for image inversion and editing</b>: Our method efficiently inverts reference style images without needing text descriptions, enabling semantic image editing based on prompts.</p>
+    <p><b>Oscillation Inversion</b>: is a phenomenon observed in large flow models. Building on this, we developed a simple and fast method that serves as a distribution transfer technique, enabling image and video enhancement as well as low-level editing, e.g. lighting and recoloring.</p>
   </div>
+
+
+
+  <!-- Main Image with Caption -->
+  <div class="content">
+    <img src="./data/imageenhance.png" alt="Main Teaser" class="teaser-pdf" style="width: 180%;">
+    <figcaption>Overview of Industry Image Enhancer with diffusion editing boosting. (P+) denotes Piscart preprocessing for ID preservation.</figcaption>
+  </div>
+
+
+
+  <div class="content">
+    <div class="gif-container">
+      <img src="./data/women.gif" alt="Teaser 1" class="teaser-gif">
+      <img src="./data/womenenhance.gif" alt="Teaser 2" class="teaser-gif">
+      <img src="./data/talkman.gif" alt="Teaser 3" class="teaser-gif">
+      <img src="./data/talkmanenhance.gif" alt="Teaser 4" class="teaser-gif">
+    </div>
+    <p>Our method serves as a domain transfer from lower quality image distribution to higher quality distribution. The result can be directly smoothed as a video enhancer due to its distribution-preserving stability (slightly temporally smoothed by AnimateDiff).</p>
+  </div>
+
+
 
   <!-- Abstract Section -->
   <div class="content">
     <h2>Abstract</h2>
-    <p>Generative models transform random noise into images; their inversion aims to transform images back to structured noise for recovery and editing. This paper addresses the inversion and editing of real images using stochastic rectified flow models. We propose a novel inversion method that provides state-of-the-art performance in zero-shot inversion and editing, outperforming prior works with qualitative and quantitative results.</p>
+    <p>We explore the oscillatory behavior observed in inversion methods applied to large-scale text-to-image diffusion models, with a focus on the "Flux" model. By employing a fixed-point-inspired iterative approach to invert real-world images, we observe that the solution does not achieve convergence, instead oscillating between distinct clusters. Through both toy experiments and real-world diffusion models, we demonstrate that these oscillating clusters exhibit notable semantic coherence. We offer theoretical insights, showing that this behavior arises from oscillatory dynamics in rectified flow models. Building on this understanding, we introduce a simple, fast distribution transfer technique that facilitates image and video enhancement, as well as low-level editing tasks such as lighting and recoloring. We further provide quantitative results demonstrating the effectiveness of our method for image enhancement and makeup transfer as recoloring tasks.</p>
+  </div>
+  <!-- Theory Image -->
+  <div class="content">
+    <img src="./data/theory.pdf" alt="Main Teaser" class="teaser-pdf">
   </div>
 
-  <!-- Contributions Section -->
+
+
+
+  <!-- Image Enhancement Section-->
   <div class="content">
-    <h2>Contributions</h2>
-    <ul>
-      <li>An efficient inversion method for rectified flow models, requiring no additional training or complex attention processors.</li>
-      <li>A novel vector field for RF inversion that balances image fidelity with alignment to the true distribution of clean images.</li>
-      <li>Extensive evaluations across three benchmarks (LSUN-Bedroom, LSUN-Church, SFHQ) on stroke-to-image synthesis and image editing, along with user preference evaluations.</li>
-    </ul>
+    <h2>Image Enhancement</h2>
+    <img src="./data/image_enhancer.pdf" alt="Graphical Model" class="summary-img">
+    <p>Oscillation triggers a high-quality distribution in the 'Output' row from two or more 'weak' distributions, shown as the 'Input' and 'Augmented' rows. The augmented distribution can be obtained from an off-the-shelf lightweight enhancer or image processing technique. The output is of high quality with extremely realistic style and texture, overcoming the over-smooth problem in GenAI images.</p>
   </div>
 
-  <!-- Graphical Model Section -->
+
+
+  <!-- Relighting Section -->
   <div class="content">
-    <h2>Graphical Model</h2>
-    <p>A comparison of DDIM inversion and RF inversion. RF inversion significantly reduces deviation between the original image and the reconstructed latent space, improving faithfulness.</p>
-    <img src="./data/graph.png" alt="Graphical Model" class="summary-img">
+    <h2>Lighting Enhancement</h2>
+    <img src="./data/relight.pdf" alt="Main Teaser" class="summary-img">
+    <p>Oscillation triggers a high-quality output of lighting harmonization through stroke prompts.</p>
   </div>
 
-  <!-- Stylization Results Section -->
+
+
+  <!-- Recolor Section-->
   <div class="content">
-    <h2>Stylization Results</h2>
-    <p><b>Stylization with a single reference image:</b> Our method generates stylized images consistent with the reference style and text prompts.</p>
-    <img src="./data/stylization.png" alt="Stylization Results" class="summary-img">
+    <h2>Recolor for Makeup</h2>
+    <img src="./data/faceV2.pdf" alt="Main Teaser" class="summary-img">
+    <p>Oscillation triggers a high-quality output of facial makeup harmonization through stroke prompts.</p>
   </div>
 
-  <!-- Cartoonization Results Section -->
-  <div class="content">
-    <h2>Cartoonization Results</h2>
-    <img src="./data/cartoonization.png" alt="Cartoonization Results" class="summary-img">
-    <h3>Cartoonization with prompt-based facial expressions in "Disney 3D cartoon style".</h3>
-  </div>
+    <!-- Video Enhancement Section -->
+    <div class="content">
+      <h2>Video Enhancement</h2>
+      <p><b>More Results Coming soon:</p>
+      <p>1. See AnimateDiff Results Above</p>
+      <p>2. We are working on OscillationInversion for Video Flow Matching</p>
+      <p>3. We are working on Temporal Module on Flux</p>
+    </div>
 
-  <!-- Stroke-to-Image Generation Section -->
-  <div class="content">
-    <h2>Stroke-to-Image Generation Results</h2>
-    <img src="./data/stroke2image-bedroom.png" alt="Stroke to Image - Bedroom" class="summary-img">
-    <h3>LSUN-Bedroom dataset: Comparison with state-of-the-art methods.</h3>
-  </div>
-
-  <!-- Semantic Image Editing Section -->
-  <div class="content">
-    <h2>Semantic Image Editing Results</h2>
-    <img src="./data/glasses.png" alt="Adding Glasses" class="summary-img">
-    <h3>Adding glasses using the prompt "wearing glasses".</h3>
-    <img src="./data/age.png" alt="Age Editing" class="summary-img">
-    <h3>Age editing: Our method regulates the extent of age editing.</h3>
-  </div>
-
-  <!-- Text-to-Image Generation Section -->
-  <div class="content">
-    <h2>Text-to-Image Generation</h2>
-    <p>Qualitative results on text-to-image generation using rectified stochastic differential equations (SDE) across different discretization steps.</p>
-    <img src="./data/t2i-gen.png" alt="Text-to-Image Generation" class="summary-img">
-  </div>
 
   <!-- BibTex Section -->
   <div class="content">
     <h2>BibTex</h2>
     <code>
-      @article{rout2024rfinversion,<br>
-      &nbsp;&nbsp;title={Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations},<br>
-      &nbsp;&nbsp;author={Rout, L and Chen, Y and Ruiz, N and Caramanis, C and Shakkottai, S and Chu, W},<br>
-      &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2410.10792},<br>
+      @article{...,<br>
+      &nbsp;&nbsp;title={...},<br>
+      &nbsp;&nbsp;author={...},<br>
+      &nbsp;&nbsp;booktitle={arXiv preprint arxiv:...},<br>
       &nbsp;&nbsp;year={2024}<br>
       }
     </code>
@@ -173,7 +200,7 @@
 
   <!-- Acknowledgements Section -->
   <div class="content">
-    <p><strong>Acknowledgements:</strong> This research is supported by NSF Grant 2019844, a Google research award, and UT Austin ML Lab.</p>
+    <p><strong>Acknowledgements:</strong> This research is supported by UT Austin VITA Group, thanks Prof.Atlas Wang!</p>
   </div>
 
 </body>
